@@ -1,8 +1,7 @@
 
  
 <%= form_with(model: @reminder, local: true) do |form| %>
- 
-
+ <%= render 'shared/error_message'%>
  
   <p>
     <%= form.label :close_type %><br>
