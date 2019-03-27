@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_26_141816) do
+ActiveRecord::Schema.define(version: 2019_03_27_133742) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,9 +62,10 @@ ActiveRecord::Schema.define(version: 2019_03_26_141816) do
 
   create_table "reminders", force: :cascade do |t|
     t.string "close_type"
-    t.integer "periods_remind"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "periods_remind"
+    t.index ["close_type"], name: "index_reminders_on_close_type", unique: true
   end
 
   create_table "statuses", force: :cascade do |t|
