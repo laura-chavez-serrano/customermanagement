@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_27_133742) do
+ActiveRecord::Schema.define(version: 2019_03_27_203959) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,10 +54,8 @@ ActiveRecord::Schema.define(version: 2019_03_27_133742) do
     t.string "type_promotion"
     t.integer "cost_promotion"
     t.date "date_promotion"
-    t.integer "address_book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["address_book_id"], name: "index_promotions_on_address_book_id"
   end
 
   create_table "reminders", force: :cascade do |t|
