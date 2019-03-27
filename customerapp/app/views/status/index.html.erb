@@ -1,0 +1,22 @@
+<h1>Listing Reminders</h1>
+ <%= link_to 'New Status', new_status_path %>
+  
+<table>
+  <tr>
+    <th>Close Type</th>
+    <th>Periods for status</th>
+    <th></th>
+  </tr>
+ 
+  <% @statuss.each do |status| %>
+    <tr>
+      <td><%= status.kind_customer %></td>
+      <td><%= status.description %></td>
+      <td><%= status.alarm_calendar %></td>
+      <td><%= link_to 'Edit', edit_status_path(status) %></td>
+      <td><%= link_to 'Destroy', status_path(status),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,26 @@
+
+ 
+<%= form_with(model: @status, local: true) do |form| %>
+ <%= render 'shared/error_message'%>
+ 
+  <p>
+    <%= form.label :kind_customer %><br>
+    <%= form.text_field :kind_customer %>
+  </p>
+ 
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+ <p>
+    <%= form.label t(:alarm_calendar?) %><br>
+    <%= form.heck_box :alarm_calendar %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', status_path %>
+
