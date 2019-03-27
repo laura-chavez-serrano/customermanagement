@@ -1,8 +1,23 @@
 
  
 <%= form_with(model: @reminder, local: true) do |form| %>
- <%= render 'shared/error_message'%>
  
+ <% if @reminder.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@reminder.errors.count, "error") %> prohibited
+        this record from being saved:
+      </h2>
+      <ul>
+        <% @reminder.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% if notice %>
+  <p><%= notice %></p>
+<% end %>
   <p>
     <%= form.label :close_type %><br>
     <%= form.text_field :close_type %>

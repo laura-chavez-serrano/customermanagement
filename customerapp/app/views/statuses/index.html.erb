@@ -1,14 +1,14 @@
-<h1>Listing Reminders</h1>
+<h1>Listing Statuses</h1>
  <%= link_to 'New Status', new_status_path %>
   
 <table>
   <tr>
-    <th>Close Type</th>
-    <th>Periods for status</th>
-    <th></th>
+    <th>Kind of Customer</th>
+    <th>Description</th>
+    <th>Alarm Requiered?</th>
   </tr>
  
-  <% @statuss.each do |status| %>
+  <% @statuses.each do |status| %>
     <tr>
       <td><%= status.kind_customer %></td>
       <td><%= status.description %></td>
