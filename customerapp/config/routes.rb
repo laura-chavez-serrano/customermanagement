@@ -3,4 +3,5 @@ Rails.application.routes.draw do
  
   resources :reminders
   resources :statuses
+  resources :promotions
 end
