@@ -1,0 +1,41 @@
+
+ 
+<%= form_with(model: @status, local: true) do |form| %>
+ 
+ <% if @status.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@status.errors.count, "error") %> prohibited
+        this record from being saved:
+      </h2>
+      <ul>
+        <% @status.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% if notice %>
+  <p><%= notice %></p>
+<% end %>
+  <p>
+    <%= form.label :kind_customer %><br>
+    <%= form.text_field :kind_customer %>
+  </p>
+ 
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+ <p>
+    <%= form.check_box :alarm_calendar %>
+    <%= form.label ("requiere alarm?") %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', statuses_path %>
+
