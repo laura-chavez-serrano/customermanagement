@@ -14,7 +14,7 @@ class RemindersController < ApplicationController
 
     def create
         
-        @duplicate = Reminder.where(close_type: params[:close_type])
+        @duplicate = Reminder.where(close_type: reminder_params[:close_type]).exists?
         
         if @duplicate
             redirect_to new_reminder_path, notice: 'Reminder already exist'

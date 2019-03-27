@@ -14,7 +14,9 @@
       </ul>
     </div>
   <% end %>
-
+<% if notice %>
+  <p><%= notice %></p>
+<% end %>
  
   <p>
     <%= form.label :close_type %><br>
