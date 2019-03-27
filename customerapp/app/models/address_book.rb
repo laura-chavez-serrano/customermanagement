@@ -1,5 +1,6 @@
 class AddressBook < ApplicationRecord
-has many :phones
-has many :networks
-has many :promotions
+has_many :phones
+has_many :networks
+has_many :statuses
+# has many :apromotions
 end

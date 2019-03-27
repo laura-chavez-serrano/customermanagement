@@ -1,0 +1,71 @@
+
+ 
+<%= form_with(model: @address_book, local: true) do |form| %>
+ 
+ <% if @address_book.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@address_book.errors.count, "error") %> prohibited
+        this record from being saved:
+      </h2>
+      <ul>
+        <% @address_book.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% if notice %>
+  <p><%= notice %></p>
+<% end %>
+  <p>
+    <%= form.label :Customer_Type %><br>
+    <%= form.collection_select :Customer_Type, Status.order(:id), :id, :kind_customer,  include_blank: true %>
+  </p>
+ 
+  <p>
+    <%= form.label "Name     " %>
+    <%= form.label "   Last Name" %><br>
+    <%= form.text_field :First_Name %>
+    <%= form.text_field :Last_Name %>
+  </p>
+ <p>
+    <%= form.label :Address %><br>
+    <%= form.text_field :Address %>
+  </p>
+  <p>
+    <%= form.label :City %><br>
+    <%= form.text_field :City %>
+  </p>
+  <p>
+    <%= form.label :ZIP %><br>
+    <%= form.text_field :ZIP %>
+  </p>
+  <p>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+  </p>
+  <p>
+    <%= form.label :Status %><br>
+    <%= form.collection_select :Status, Status.order(:id), :id, :description,  include_blank: true %>
+  </p>
+  <p>
+    <%= form.label "Category" %><br>
+    <%= form.collection_select :Category_Buyers, Reminder.order(:id), :id, :close_type,  include_blank: true %>
+  </p>
+  <p>
+    <%= form.label :Anniversary %><br>
+    <%= form.date_field :Anniversary %>
+  </p>
+  <p>
+    <%= form.label :Comments %><br>
+    <%= form.text_area :Comments %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', address_books_path %>
+
