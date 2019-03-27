@@ -1,0 +1,21 @@
+<h1>Listing Reminders</h1>
+ <%= link_to 'New Reminder', new_reminder_path %>
+  
+<table>
+  <tr>
+    <th>Close Type</th>
+    <th>Periods for reminder</th>
+    <th></th>
+  </tr>
+ 
+  <% @reminders.each do |reminder| %>
+    <tr>
+      <td><%= reminder.close_type %></td>
+      <td><%= reminder.periods_remind %></td>
+      <td><%= link_to 'Edit', edit_reminder_path(reminder) %></td>
+      <td><%= link_to 'Destroy', reminder_path(reminder),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
