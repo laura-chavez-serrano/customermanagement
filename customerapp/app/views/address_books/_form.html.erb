@@ -20,7 +20,7 @@
 <% end %>
   <p>
     <%= form.label :Customer_Type %><br>
-    <%= form.collection_select :Customer_Type, Status.order(:id), :id, :kind_customer,  include_blank: true %>
+    <%= form.collection_select :Customer_Type, Kindcustomer.order(:id), :kind_customer, :kind_customer,  include_blank: true %>
   </p>
  
   <p>
@@ -47,12 +47,14 @@
   </p>
   <p>
     <%= form.label :Status %><br>
-    <%= form.collection_select :Status, Status.order(:id), :id, :description,  include_blank: true %>
+    <%= form.collection_select :Status, Status.order(:id), :description, :description,  include_blank: true %>
   </p>
+  <%# <% if status=close%> %>
   <p>
-    <%= form.label "Category" %><br>
-    <%= form.collection_select :Category_Buyers, Reminder.order(:id), :id, :close_type,  include_blank: true %>
+    <%= form.label "Closing Category" %><br>
+    <%= form.collection_select :Category_Buyers, Reminder.order(:id), :close_type, :close_type,  include_blank: true %>
   </p>
+  <%# <%end%> %>
   <p>
     <%= form.label :Anniversary %><br>
     <%= form.date_field :Anniversary %>
