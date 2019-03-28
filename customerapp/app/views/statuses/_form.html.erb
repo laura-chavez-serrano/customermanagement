@@ -20,7 +20,7 @@
 <% end %>
   <p>
     <%= form.label :kind_customer %><br>
-    <%= form.text_field :kind_customer %>
+    <%= form.collection_select :kind_customer, Kindcustomer.order(:id), :kind_customer, :kind_customer,  include_blank: true %>
   </p>
  
   <p>

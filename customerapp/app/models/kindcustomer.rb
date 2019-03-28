@@ -1,0 +1,2 @@
+class Kindcustomer < ApplicationRecord
+end

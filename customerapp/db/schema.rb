@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_27_203959) do
+ActiveRecord::Schema.define(version: 2019_03_28_200354) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,20 @@ ActiveRecord::Schema.define(version: 2019_03_27_203959) do
     t.text "Comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "phone"
+    t.string "phone2"
+    t.string "phone3"
+    t.string "phone4"
+    t.string "phonetype"
+    t.string "phonetype2"
+    t.string "phonetype3"
+    t.string "phonetype4"
+  end
+
+  create_table "kindcustomers", force: :cascade do |t|
+    t.string "kind_customer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "networks", force: :cascade do |t|
@@ -39,15 +53,6 @@ ActiveRecord::Schema.define(version: 2019_03_27_203959) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["address_book_id"], name: "index_networks_on_address_book_id"
-  end
-
-  create_table "phones", force: :cascade do |t|
-    t.string "number"
-    t.integer "phone_number_type"
-    t.integer "address_book_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["address_book_id"], name: "index_phones_on_address_book_id"
   end
 
   create_table "promotions", force: :cascade do |t|

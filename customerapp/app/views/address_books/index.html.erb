@@ -1,0 +1,32 @@
+<h1>Listing Customers</h1>
+ <%= link_to 'New Customer', new_address_book_path %>
+  
+<table>
+  <tr>
+    <th>Customer_Type</th>
+    <th>Name</th>
+    <th> Address</th>
+      <th> email</th>
+      <th> phone</th>
+      <th> Anniversary</th>
+      <th> Category</th>
+  </tr>
+ 
+  <% @address_books.each do |address| %>
+    <tr>
+      <td><%= address.Customer_Type %></td>
+      <td><%= address.First_Name %></td>
+      <td><%= address.Last_Name%></td>
+      <td><%= address.Address%></td>
+      <td><%= address.email%></td>
+      <td><%= address.phone%></td>
+      <td><%= address.phone%></td>
+      <td><%= address.Anniversary%></td>
+      <td><%= address.Category_Buyers%></td>
+      <td><%= link_to 'Edit', edit_address_book_path(address_book) %></td>
+      <td><%= link_to 'Destroy', address_book_path(address_book),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
