@@ -46,6 +46,22 @@
     <%= form.text_field :email %>
   </p>
   <p>
+    <%= form.label :phone %><br>
+    <%= form.text_field :phone %>
+  </p>
+  <p>
+    <%= form.label :phone2 %><br>
+    <%= form.text_field :phone2 %>
+  </p>
+  <p>
+    <%= form.label :phone3 %><br>
+    <%= form.text_field :phone3 %>
+  </p>
+  <p>
+    <%= form.label :phone4 %><br>
+    <%= form.text_field :phone4 %>
+  </p>
+  <p>
     <%= form.label :Status %><br>
     <%= form.collection_select :Status, Status.order(:id), :description, :description,  include_blank: true %>
   </p>

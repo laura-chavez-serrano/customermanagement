@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_27_234205) do
+ActiveRecord::Schema.define(version: 2019_03_28_002258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,10 @@ ActiveRecord::Schema.define(version: 2019_03_27_234205) do
     t.text "Comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "phone"
+    t.string "phone2"
+    t.string "phone3"
+    t.string "phone4"
   end
 
   create_table "kindcustomers", force: :cascade do |t|
