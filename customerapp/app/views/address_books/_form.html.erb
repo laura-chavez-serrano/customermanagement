@@ -48,7 +48,10 @@
   <p>
     <%= form.label :phone %><br>
     <%= form.text_field :phone %>
+  <%= form.label "phone type" %><br>
+  <%= form.select :phonetype, address_book.phonetypes.keys %>
   </p>
+
   <p>
     <%= form.label :phone2 %><br>
     <%= form.text_field :phone2 %>
