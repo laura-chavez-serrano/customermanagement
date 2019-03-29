@@ -14,17 +14,17 @@
  
   <% @address_books.each do |address| %>
     <tr>
-      <td><%= address.Customer_Type %></td>
-      <td><%= address.First_Name %></td>
-      <td><%= address.Last_Name%></td>
-      <td><%= address.Address%></td>
+      <td><%= address.customer_type %></td>
+      
+      <td><%= address.fullname%></td>
+      <td><%= address.address%></td>
       <td><%= address.email%></td>
+      <td><%= address.phonetype%></td>
       <td><%= address.phone%></td>
-      <td><%= address.phone%></td>
-      <td><%= address.Anniversary%></td>
-      <td><%= address.Category_Buyers%></td>
-      <td><%= link_to 'Edit', edit_address_book_path(address_book) %></td>
-      <td><%= link_to 'Destroy', address_book_path(address_book),
+      <td><%= address.anniversary%></td>
+      <td><%= address.category%></td>
+      <td><%= link_to 'Edit', edit_address_book_path(address) %></td>
+      <td><%= link_to 'Destroy', address_book_path(address),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>

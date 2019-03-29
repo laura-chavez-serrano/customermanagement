@@ -41,21 +41,24 @@ class AddressBooksController < ApplicationController
          end
        private
            def address_book_params
-               params.require(:address_book).permit(:Customer_Type, 
-               :First_Name,
-               :Last_Name,
-               :Address,
-               :City,
-               :ZIP,
+               params.require(:address_book).permit(:customer_type, 
+               :first_name,
+               :last_name,
+               :address,
+               :city,
+               :zip,
                :email,
                :phone,
                :phonetype,
                :phone2,
+               :phonetype2,
                :phone3,
+               :phonetype3,
                :phone4,
-               :Status,
-               :Category_Buyers,
-               :Anniversary,
-              :Comments)
+               :phonetype4,
+               :status,
+               :category,
+               :anniversary,
+              :comments)
            end  
 end

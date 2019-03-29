@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   get 'address_books/index'
  
   
-  resources :address_books
+  
+  resources :address_books do
+    resources :networks
+  end
+  
   resources :reminders
   resources :statuses
   resources :promotions

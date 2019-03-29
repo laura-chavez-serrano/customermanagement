@@ -1,10 +1,11 @@
 class AddressBook < ApplicationRecord
 
-has_many :networks
+has_many :networks, dependent: :destroy
 
-# has many :apromotions
-enum phonetype: [:home, :office, :mobile, :fax]
-enum phonetype2: [:home, :office, :mobile, :fax]
-enum phonetype3: [:home, :office, :mobile, :fax]
-enum phonetype4: [:home, :office, :mobile, :fax]
+# has many :apromotions, dependent: :destroy
+#add FullName field in table?
+before_save do
+    self.fullname = "#{first_name} #{last_name}"
+  end
+
 end
