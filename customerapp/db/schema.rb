@@ -10,23 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_28_200354) do
+ActiveRecord::Schema.define(version: 2019_03_29_205814) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "address_books", force: :cascade do |t|
-    t.string "Customer_Type"
-    t.string "First_Name"
-    t.string "Last_Name"
-    t.string "Address"
-    t.string "City"
-    t.integer "ZIP"
+    t.string "customer_type"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "address"
+    t.string "city"
+    t.integer "zip"
     t.string "email"
-    t.string "Status"
-    t.string "Category_Buyers"
-    t.date "Anniversary"
-    t.text "Comments"
+    t.string "status"
+    t.string "category"
+    t.date "anniversary"
+    t.text "comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "phone"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_03_28_200354) do
     t.string "phonetype2"
     t.string "phonetype3"
     t.string "phonetype4"
+    t.string "fullname"
   end
 
   create_table "kindcustomers", force: :cascade do |t|

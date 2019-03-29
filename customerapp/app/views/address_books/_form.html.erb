@@ -19,27 +19,27 @@
   <p><%= notice %></p>
 <% end %>
   <p>
-    <%= form.label :Customer_Type %><br>
-    <%= form.collection_select :Customer_Type, Kindcustomer.order(:id), :kind_customer, :kind_customer,  include_blank: true %>
+    <%= form.label :customer_type %><br>
+    <%= form.collection_select :customer_type, Kindcustomer.order(:id), :kind_customer, :kind_customer,  include_blank: true %>
   </p>
  
   <p>
     <%= form.label "Name     " %>
     <%= form.label "   Last Name" %><br>
-    <%= form.text_field :First_Name %>
-    <%= form.text_field :Last_Name %>
+    <%= form.text_field :first_name %>
+    <%= form.text_field :last_name %>
   </p>
  <p>
-    <%= form.label :Address %><br>
-    <%= form.text_field :Address %>
+    <%= form.label :address %><br>
+    <%= form.text_area :address %>
   </p>
   <p>
-    <%= form.label :City %><br>
-    <%= form.text_field :City %>
+    <%= form.label :city %><br>
+    <%= form.text_field :city %>
   </p>
   <p>
-    <%= form.label :ZIP %><br>
-    <%= form.text_field :ZIP %>
+    <%= form.label :zip %><br>
+    <%= form.text_field :zip %>
   </p>
   <p>
     <%= form.label :email %><br>
@@ -47,40 +47,43 @@
   </p>
   <p>
     <%= form.label :phone %><br>
-    <%= form.text_field :phone %>
-  <%= form.label "phone type" %><br>
-  <%= form.select :phonetype, address_book.phonetypes.keys %>
+    
+  <%= form.select(:phonetype,['home', 'office', 'mobile', 'fax'], :include_blank => "Type" ) %>
+  <%= form.text_field :phone %>
   </p>
 
   <p>
     <%= form.label :phone2 %><br>
+    <%= form.select(:phonetype2,['home', 'office', 'mobile', 'fax'], :include_blank => "Type" ) %>
     <%= form.text_field :phone2 %>
   </p>
   <p>
     <%= form.label :phone3 %><br>
+    <%= form.select(:phonetype3,['home', 'office', 'mobile', 'fax'], :include_blank => "Type" ) %>
     <%= form.text_field :phone3 %>
   </p>
   <p>
     <%= form.label :phone4 %><br>
+    <%= form.select(:phonetype4,['home', 'office', 'mobile', 'fax'], :include_blank => "Type" ) %>
     <%= form.text_field :phone4 %>
   </p>
   <p>
-    <%= form.label :Status %><br>
-    <%= form.collection_select :Status, Status.order(:id), :description, :description,  include_blank: true %>
+    <%= form.label :status %><br>
+    <%= form.collection_select :status, Status.order(:id), :description, :description,  include_blank: true %>
   </p>
-  <%# <% if status=close%> %>
+  
   <p>
     <%= form.label "Closing Category" %><br>
-    <%= form.collection_select :Category_Buyers, Reminder.order(:id), :close_type, :close_type,  include_blank: true %>
+    <%= form.collection_select :category, Reminder.order(:id), :close_type, :close_type,  include_blank: true %>
   </p>
-  <%# <%end%> %>
+  
   <p>
-    <%= form.label :Anniversary %><br>
-    <%= form.date_field :Anniversary %>
+    <%= form.label :anniversary %><br>
+    <%= form.date_field :anniversary %>
   </p>
   <p>
-    <%= form.label :Comments %><br>
-    <%= form.text_area :Comments %>
+    <%= form.label :comments %><br>
+    <%= form.text_area :comments %>
   </p>
   <p>
     <%= form.submit %>
