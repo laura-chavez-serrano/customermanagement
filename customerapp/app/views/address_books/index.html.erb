@@ -6,9 +6,12 @@
     <th>Customer_Type</th>
     <th>Name</th>
     <th> Address</th>
+    <th>City </th>
       <th> email</th>
-      <th> phone</th>
+      <th>Type </th>
+      <th> Phone</th>
       <th> Anniversary</th>
+      <th> Status</th>
       <th> Category</th>
   </tr>
  
@@ -18,11 +21,15 @@
       
       <td><%= address.fullname%></td>
       <td><%= address.address%></td>
+      <td><%= address.city%></td>
       <td><%= address.email%></td>
       <td><%= address.phonetype%></td>
-      <td><%= address.phone%></td>
+      <td><%= number_to_phone(address.phone, area_code: true) %></td>
+      
       <td><%= address.anniversary%></td>
+       <td><%= address.status%></td>
       <td><%= address.category%></td>
+      <td><%= link_to 'More', edit_address_book_path(address) %></td>
       <td><%= link_to 'Edit', edit_address_book_path(address) %></td>
       <td><%= link_to 'Destroy', address_book_path(address),
               method: :delete,
