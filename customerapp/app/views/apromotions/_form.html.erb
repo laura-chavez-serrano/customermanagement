@@ -1,0 +1,95 @@
+
+ 
+<%= form_with(model: @address_book, local: true) do |form| %>
+ 
+ <% if @address_book.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@address_book.errors.count, "error") %> prohibited
+        this record from being saved:
+      </h2>
+      <ul>
+        <% @address_book.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% if notice %>
+  <p><%= notice %></p>
+<% end %>
+  <p>
+    <%= form.label :customer_type %><br>
+    <%= form.collection_select :customer_type, Kindcustomer.order(:id), :kind_customer, :kind_customer,  include_blank: true %>
+  </p>
+ 
+  <p>
+    <%= form.label "Name     " %>
+    <%= form.label "   Last Name" %><br>
+    <%= form.text_field :first_name %>
+    <%= form.text_field :last_name %>
+  </p>
+ <p>
+    <%= form.label :address %><br>
+    <%= form.text_area :address %>
+  </p>
+  <p>
+    <%= form.label :city %><br>
+    <%= form.text_field :city %>
+  </p>
+  <p>
+    <%= form.label :zip %><br>
+    <%= form.text_field :zip %>
+  </p>
+  <p>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+  </p>
+  <p>
+    <%= form.label :phone %><br>
+    
+  <%= form.select(:phonetype,['home', 'office', 'mobile', 'fax'], :include_blank => "Type" ) %>
+  <%= form.text_field :phone %>
+  </p>
+
+  <p>
+    <%= form.label :phone2 %><br>
+    <%= form.select(:phonetype2,['home', 'office', 'mobile', 'fax'], :include_blank => "Type" ) %>
+    <%= form.text_field :phone2 %>
+  </p>
+  <p>
+    <%= form.label :phone3 %><br>
+    <%= form.select(:phonetype3,['home', 'office', 'mobile', 'fax'], :include_blank => "Type" ) %>
+    <%= form.text_field :phone3 %>
+  </p>
+  <p>
+    <%= form.label :phone4 %><br>
+    <%= form.select(:phonetype4,['home', 'office', 'mobile', 'fax'], :include_blank => "Type" ) %>
+    <%= form.text_field :phone4 %>
+  </p>
+  <p>
+    <%= form.label :status %><br>
+    <%= form.collection_select :status, Status.order(:id), :description, :description,  include_blank: true %>
+  </p>
+  
+  <p>
+    <%= form.label "Closing Category" %><br>
+    <%= form.collection_select :category, Reminder.order(:id), :close_type, :close_type,  include_blank: true %>
+  </p>
+  
+  <p>
+    <%= form.label :anniversary %><br>
+    <%= form.date_field :anniversary %>
+  </p>
+  <p>
+    <%= form.label :comments %><br>
+    <%= form.text_area :comments %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', address_books_path %>
+

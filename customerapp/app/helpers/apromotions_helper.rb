@@ -1,0 +1,2 @@
+module ApromotionsHelper
+end
