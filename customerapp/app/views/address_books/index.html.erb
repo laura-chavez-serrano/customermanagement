@@ -29,11 +29,12 @@
       <td><%= address.anniversary%></td>
        <td><%= address.status%></td>
       <td><%= address.category%></td>
-      <td><%= link_to 'More', edit_address_book_path(address) %></td>
+      <td><%= link_to 'Details', edit_address_book_path(address) %></td>
       <td><%= link_to 'Edit', edit_address_book_path(address) %></td>
       <td><%= link_to 'Destroy', address_book_path(address),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Promotions', address_book_promotions_path(address) %></td>
     </tr>
   <% end %>
 </table>
