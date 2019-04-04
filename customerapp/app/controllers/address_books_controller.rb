@@ -26,7 +26,17 @@ class AddressBooksController < ApplicationController
        end
        def update
            @address_book = AddressBook.find(params[:id])
-          
+          # add code to identify if params:address is diferent from the one
+          # in the current record and create a record in log to keep previous information
+          if @address_book.address != address_book_params["address"]
+           @log = Addresslog.new
+            @log.anniversary = @address_book.anniversary
+            @log.city = @address_book.city
+            @log.address = @address_book.address
+            @log.address_book_id = @address_book.id
+            @log.save
+          end
+
            if @address_book.update(address_book_params)
              redirect_to address_books_path
            else
