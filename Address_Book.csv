@@ -1,37 +1,37 @@
 ﻿customer_type,first_name,last_name,address,city,zip,email,status,category,anniversary,comments
 Buyer,Nick,Bavin,1425 Copper Creek Drive,Durham,27713,nickbavin@gmail.com,Close,Close A,,
-Buyer,Melissa,Raybuck,1217 Umstead RD,Durham,27712,buddhaslight8@gmail.com,Close,Close A,3 /23/2016,
-Buyer,Kate,Bruce,1013 Red Hat Lane,Durham,27713,,Close,Close B,6 /29/2016,Missing e-mail
-Buyer,Christopher,McCallin,7746 Weathered Oak Way,Raleigh,27616,cmccallin13@gmail.com,Close,Close A,9 /29/2015,
-Buyer,Blake,Anderson,377 Booth RD,Chapel Hill,27516,,Close,Close C,5 /31/2016,Missing e-mail
-Buyer,Amos Jr,Cooper,122 E Seeman Street,Durham,27701,,Close,Close A,6 /22/2016,
-Buyer,Antonio,Baltazar Zurita,1905 House Avenue,Durham,27707,ncdurham1@gmail.com,Close,Close A,6 /30/2016,
-Buyer,Cesar Damian,Gonzalez Arenas,2311 Cynthia Drive,Durham,27704,,Close,Close A,7 /12/2016,Missing e-mail
-Buyer,Andrew,Fairbanks,3628 Shrewsbury Streer,Durham,27707,,Close,Close B,8 /18/2016,Missing e-mail
-Buyer,Bradley,Bolton,3 Crestbury Court,Durham,27713,,Close,Close B,11/4 /2016,Missing e-mail
-Buyer,Jordan,Davis,25 Sandtone Ridge Drive,Durham,27713,,Close,Close B,11/8 /2016,Missing e-mail
-Buyer,Olivia,Bowers,8 Big Bluff Place,Durham,27712,,Close,Close C,1 /12/2017,Missing e-mail
-Buyer,Katherine,McDaniel,505 Hugo St,Durham,27713,,Close,Close B,9 /28/2015,Missing e-mail
-Buyer,Jesse,Bikman,3 Medearis Court,Durham,27707,,Close,Close B,4 /25/2017,Missing e-mail
-Buyer,Kelly,McCarren,197 Quarter Gate Trace,Chapel Hill,27516,,Close,Close B,5 /15/2017,Missing e-mail
-Buyer,Justin,Cuevas,108 Shady Point Court,Durham,27703,,Close,Close C,7 /12/2017,Missing e-mail
-Buyer,Darrell,Jefferies,707 Clearwater Drive,Sanford,27330,,Close,Close F,5 /6 /2016,Missing e-mail
+Buyer,Melissa,Raybuck,1217 Umstead RD,Durham,27712,buddhaslight8@gmail.com,Close,Close A,2016-03-23,
+Buyer,Kate,Bruce,1013 Red Hat Lane,Durham,27713,,Close,Close B,2016-06-29,Missing e-mail
+Buyer,Christopher,McCallin,7746 Weathered Oak Way,Raleigh,27616,cmccallin13@gmail.com,Close,Close A,2015-09-29,
+Buyer,Blake,Anderson,377 Booth RD,Chapel Hill,27516,,Close,Close C,2016-05-31,Missing e-mail
+Buyer,Amos Jr,Cooper,122 E Seeman Street,Durham,27701,,Close,Close A,2016-06-22,
+Buyer,Antonio,Baltazar Zurita,1905 House Avenue,Durham,27707,ncdurham1@gmail.com,Close,Close A,2016-06-30,
+Buyer,Cesar Damian,Gonzalez Arenas,2311 Cynthia Drive,Durham,27704,,Close,Close A,2016-07-12,Missing e-mail
+Buyer,Andrew,Fairbanks,3628 Shrewsbury Streer,Durham,27707,,Close,Close B,2016-08-18,Missing e-mail
+Buyer,Bradley,Bolton,3 Crestbury Court,Durham,27713,,Close,Close B,2016-11-04,Missing e-mail
+Buyer,Jordan,Davis,25 Sandtone Ridge Drive,Durham,27713,,Close,Close B,2016-11-08,Missing e-mail
+Buyer,Olivia,Bowers,8 Big Bluff Place,Durham,27712,,Close,Close C,2017-01-12,Missing e-mail
+Buyer,Katherine,McDaniel,505 Hugo St,Durham,27713,,Close,Close B,2015-09-28,Missing e-mail
+Buyer,Jesse,Bikman,3 Medearis Court,Durham,27707,,Close,Close B,2017-04-25,Missing e-mail
+Buyer,Kelly,McCarren,197 Quarter Gate Trace,Chapel Hill,27516,,Close,Close B,2017-05-15,Missing e-mail
+Buyer,Justin,Cuevas,108 Shady Point Court,Durham,27703,,Close,Close C,2017-07-12,Missing e-mail
+Buyer,Darrell,Jefferies,707 Clearwater Drive,Sanford,27330,,Close,Close F,2016-05-06,Missing e-mail
 Buyer,Kristyn,Walker,,,,Kristynwalker@gmail.com,In Progress,In Progress B,,"Working with an agent MAYBE, For my parents"
 Buyer,Ben,Schlax,,,,Benschalax@gmail.com,In Progress,In Progress B,,"Working with an agent MAYBE,Loan Information"
 Buyer,Brittany,Burton,,,,Brittanyburton1107;@gmail.com,In Progress,In Progress A,,"Working with an agent MAYBE,MLS"
-Buyer,Alejandra,Dorantes,5006 Greenview Drive,Durham,27713,,Close,Close F,7 /20/2015,NO BAD LETTER TO BOSS
-Buyer,Pavle,Matak,1804 N Alston Av,Durham,27701,,Close,Close B,8 /25/2015,Looking for another house soon
-Buyer,Hector,Sauceda-Padilla,4623 Bragg Road,Durham,27704,,Close,Close F,8 /28/2015,Missing e-mail
-Buyer,Lauro,Martinez-Perez,2115 Faucette street,Durham,27704,,Close,Close F,10/5 /2015,Missing e-mail
-Buyer,Megan,Sayre,6024 Newhall RD,Durham,27713,,Close,Close F,3 /30/2016,Missing e-mail
-Buyer,Chongming,Yang,1902 Patterson Mill RD,Durham,27703,,Close,Close C,7 /14/2016,Missing e-mail
-Buyer,Roberto,Maya-Sanchez,4621 Redwood Road,Durham,27704,,Close,Close C,9 /15/2016,Missing e-mail
-Buyer,Denis,Mackey,425 S Morgan ST,Roxboro,27573,,Close,Close F,12/22/2016,Missing e-mail
-Buyer,Patrick,Foster,7250 NC 751 #1307,Durham,27707,,Close,Close F,1 /19/2017,Missing e-mail
-Buyer,Anna Lina,Karin Rosengren,1200 Hanover Street,Durham,27701,,Close,Close C,6 /29/2016,Missing e-mail
-Buyer,Katherine,McDaniel,505 Hugo ST,Durham,27704,,Close,Close B,3 /6 /2017,Missing e-mail
-Buyer,Sabu,Devasia,4009 Lady Slipper Lane,Durham,27704,,Close,Close A,6 /29/2017,Missing e-mail
-Buyer,Lindsay,Franklin,3241 Banks Road,Raleigh,27603,,Close,Close C,7 /31/2017,Missing e-mail
+Buyer,Alejandra,Dorantes,5006 Greenview Drive,Durham,27713,,Close,Close F,2015-07-20,NO BAD LETTER TO BOSS
+Buyer,Pavle,Matak,1804 N Alston Av,Durham,27701,,Close,Close B,2015-08-25,Looking for another house soon
+Buyer,Hector,Sauceda-Padilla,4623 Bragg Road,Durham,27704,,Close,Close F,2015-08-28,Missing e-mail
+Buyer,Lauro,Martinez-Perez,2115 Faucette street,Durham,27704,,Close,Close F,2015-10-05,Missing e-mail
+Buyer,Megan,Sayre,6024 Newhall RD,Durham,27713,,Close,Close F,2016-03-30,Missing e-mail
+Buyer,Chongming,Yang,1902 Patterson Mill RD,Durham,27703,,Close,Close C,2016-07-14,Missing e-mail
+Buyer,Roberto,Maya-Sanchez,4621 Redwood Road,Durham,27704,,Close,Close C,2016-09-15,Missing e-mail
+Buyer,Denis,Mackey,425 S Morgan ST,Roxboro,27573,,Close,Close F,2016-12-22,Missing e-mail
+Buyer,Patrick,Foster,7250 NC 751 #1307,Durham,27707,,Close,Close F,2017-01-19,Missing e-mail
+Buyer,Anna Lina,Karin Rosengren,1200 Hanover Street,Durham,27701,,Close,Close C,2016-06-29,Missing e-mail
+Buyer,Katherine,McDaniel,505 Hugo ST,Durham,27704,,Close,Close B,2017-03-06,Missing e-mail
+Buyer,Sabu,Devasia,4009 Lady Slipper Lane,Durham,27704,,Close,Close A,2017-06-29,Missing e-mail
+Buyer,Lindsay,Franklin,3241 Banks Road,Raleigh,27603,,Close,Close C,2017-07-31,Missing e-mail
 Buyer,Stephanie,Suber,10 Stillwater Park,Durham,27707,snssuber@gmail.com,In Progress,,,
 Buyer,Edgardo,Lauriano,9171 Durham Road,Durham,27583,Edgardo.lauriano@gmail.com,In Progress,,,
 Buyer,Robert,Weeks,,,,Robertweeksrj@yahoo.com;Nick112580@aol.com,In Progress,In Progress A,,
