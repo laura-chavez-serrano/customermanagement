@@ -1,0 +1,2 @@
+class Addresslog < ApplicationRecord
+end
