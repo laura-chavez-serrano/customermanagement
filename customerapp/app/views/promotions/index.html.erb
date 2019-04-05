@@ -12,7 +12,7 @@
     <tr>
       <td><%= promotion.type_promotion %></td>
       <td><%= number_to_currency(promotion.cost_promotion) %></td>
-      <td><%= promotion.date_promotion.to_s(:long)%>
+      <td><%= promotion.date_promotion%>
       <td><%= link_to 'Edit', edit_promotion_path(promotion) %></td>
       <td><%= link_to 'Destroy', promotion_path(promotion),
               method: :delete,
@@ -20,3 +20,5 @@
     </tr>
   <% end %>
 </table>
+<%= link_to 'Back to list of Customers', :back %>
+<%= link_to 'Assign new Promotion to previous Customer', address_book_apromotions_path(address)%>

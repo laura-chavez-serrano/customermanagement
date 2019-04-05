@@ -30,7 +30,7 @@ class AddressBooksController < ApplicationController
           # in the current record and create a record in log to keep previous information
           if @address_book.address != address_book_params["address"]
            @log = Addresslog.new
-            @log.anniversary = @address_book.anniversary
+            @log.anniversary = @address_book.date_anniversary
             @log.city = @address_book.city
             @log.address = @address_book.address
             @log.address_book_id = @address_book.id
@@ -68,7 +68,7 @@ class AddressBooksController < ApplicationController
                :phonetype4,
                :status,
                :category,
-               :anniversary,
+               :date_anniversary,
               :comments)
            end  
 end
