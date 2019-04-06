@@ -1,0 +1,27 @@
+<h1>History of Address for:
+ <%= AddressBook.find(params[:address_book_id]).fullname %></h1>
+  
+<table>
+  <tr>
+    
+    <th> Address</th>
+    <th>City </th>
+      <th> Anniversary</th>
+      
+  </tr>
+ 
+  <% @logs.each do |address| %>
+    <tr>
+      <td><%= address.type_property%></td>
+      <td><%= address.address%></td>
+      <td><%= address.city%></td>
+      <td><%= address.anniversary.to_s(:long)%>
+       
+      
+      
+    </tr>
+    
+  <% end %>
+  
+</table>
+<%= link_to 'Back', address_books_path %>

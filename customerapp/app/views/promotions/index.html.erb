@@ -6,17 +6,47 @@
     <th>Promotion Type</th>
     <th>Total Cost Promotion</th>
     <th>Date of Promotion</th>
+    <%if params[:format] != "0"%>
+    <th>Edit</th>
+    <th>Delete</th>
+    <%# if comming from one customer or index view%> 
+    
+      <th>Promotion Assigned to:<br>
+      <%= AddressBook.find(params[:format]).fullname %></th>
+    <%end%>
   </tr>
- 
+  
   <% @promotions.each do |promotion| %>
     <tr>
       <td><%= promotion.type_promotion %></td>
       <td><%= number_to_currency(promotion.cost_promotion) %></td>
-      <td><%= promotion.date_promotion.to_s(:long)%>
+      <td><%= promotion.date_promotion%>
       <td><%= link_to 'Edit', edit_promotion_path(promotion) %></td>
       <td><%= link_to 'Destroy', promotion_path(promotion),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+              
+              <%# if comming from one customer %>
+    
+      <%if params[:format] != "0"%>
+          <%@valid = Apromotion.where(address_book_id: params[:format], type_promotion: promotion.type_promotion).exists? %>
+          
+          <td><%if @valid ==  true%>
+                <%=check_box_tag("ok_answer", value = "1", checked = true, options = {})%>
+              <%else%>
+                <%=check_box_tag("ok_answer", value = "", checked = false, options = {})%>
+            <%end%></td>
+        <%else%>
+        <td><%= link_to 'Assignments', promotion_path(promotion) %></td>   
+        
+      <% end %>
+      
   <% end %>
+  </tr>
 </table>
+      
+      
+   
+
+<%= link_to 'Back', :back %>
+

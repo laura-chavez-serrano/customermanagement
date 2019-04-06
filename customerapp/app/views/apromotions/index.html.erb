@@ -1,6 +1,6 @@
 <h1>Listing Promotions Assigned to:</h1>
- <%= link_to AddressBook.find(@address.address_book_id).name %>
-  <%= link_to 'Create New Promotion', xxx_path() %>
+ <%= AddressBook.find(params[:address_book_id]).fullname %></h1>
+  <%= link_to 'New promotion', new_promotion_path %>
 <table>
   <tr>
     <th>Type of Promotion</th>
@@ -9,21 +9,21 @@
     <th>Status</th>
   </tr>
  
-  <% @address_books.apromotion.each do |addressp| %>
+  <% @apromotions.each do |addressp| %>
     <tr>
       <td><%= addressp.type_promotion %></td>
       
       <td><%= addressp.assigned_date%></td>
       <td><%= addressp.unit_cost%></td>
       <td><%= addressp.active%></td>
-      
-      
-      <td><%= link_to 'Assign New Promotion', new_address_book_apromotion_path %></td>
-      <td><%= link_to 'Edit', edit_address_book_apromotion_path(address) %></td>
       <td><%= link_to 'Destroy', address_book_apromotion_path(address),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
+              data: { confirm: 'Are you sure?' } %></td> %>
       
     </tr>
   <% end %>
 </table>
+<%# table for new assigment %>
+<%= render 'promotions/index' %>
+
+<%= link_to 'Back', address_books_path %>

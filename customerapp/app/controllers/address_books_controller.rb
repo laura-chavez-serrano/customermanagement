@@ -2,7 +2,11 @@ class AddressBooksController < ApplicationController
     def index
         @address_books = AddressBook.all
        end
-       
+       #details of address 
+     def show
+        
+      @address = AddressBook.find(params[:id])
+   end
        def edit
            @address_book = AddressBook.find(params[:id])
        end
@@ -30,7 +34,7 @@ class AddressBooksController < ApplicationController
           # in the current record and create a record in log to keep previous information
           if @address_book.address != address_book_params["address"]
            @log = Addresslog.new
-            @log.anniversary = @address_book.anniversary
+            @log.anniversary = @address_book.date_anniversary
             @log.city = @address_book.city
             @log.address = @address_book.address
             @log.address_book_id = @address_book.id
@@ -54,6 +58,7 @@ class AddressBooksController < ApplicationController
                params.require(:address_book).permit(:customer_type, 
                :first_name,
                :last_name,
+               :type_property,
                :address,
                :city,
                :zip,
@@ -68,7 +73,7 @@ class AddressBooksController < ApplicationController
                :phonetype4,
                :status,
                :category,
-               :anniversary,
+               :date_anniversary,
               :comments)
            end  
 end

@@ -1,0 +1,29 @@
+<h1>Network of :
+ <%= AddressBook.find(params[:address_book_id]).fullname %></h1>
+  
+<table>
+  <tr>
+    
+    <th> Type</th>
+    <th>Name </th>
+      <th> anniversary/birthday</th>
+      <th>e-mail/phone </th>
+      
+  </tr>
+ 
+  <% @networks.each do |network| %>
+    <tr>
+    <td><%= network.kind_relationship%>
+      <td><%= network.reference_name%></td>
+      <td><%= network.anniversary.to_s(:long)%></td>
+      <td><%= network.email_phone%></td>
+      
+       
+      
+      
+    </tr>
+    
+  <% end %>
+  
+</table>
+<%= link_to 'Back', address_books_path %>
