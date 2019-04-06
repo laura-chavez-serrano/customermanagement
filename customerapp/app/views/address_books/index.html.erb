@@ -18,7 +18,7 @@
   <% @address_books.each do |address| %>
     <tr>
       
-      <td><%= address.fullname%></td>
+      <td><%= link_to address.fullname,  address_book_networks_path(address)%></td>
       <td><%= link_to address.address, address_book_addresslogs_path(address)%></td>
       <td><%= address.city%></td>
       <td><%= address.email%></td>
@@ -33,7 +33,7 @@
       <td><%= link_to 'Destroy', address_book_path(address),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
-              <td><%= link_to 'Promotions', promotions_path(address) %></td>
+      <td><%= link_to 'Promotions', promotions_path(address) %></td>
     </tr>
   <% end %>
 </table>

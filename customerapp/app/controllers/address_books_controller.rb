@@ -2,7 +2,11 @@ class AddressBooksController < ApplicationController
     def index
         @address_books = AddressBook.all
        end
-       
+       #details of address 
+     def show
+        
+      @address = AddressBook.find(params[:id])
+   end
        def edit
            @address_book = AddressBook.find(params[:id])
        end
@@ -54,6 +58,7 @@ class AddressBooksController < ApplicationController
                params.require(:address_book).permit(:customer_type, 
                :first_name,
                :last_name,
+               :type_property,
                :address,
                :city,
                :zip,

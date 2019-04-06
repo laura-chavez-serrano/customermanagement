@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_06_171450) do
+ActiveRecord::Schema.define(version: 2019_04_06_224830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2019_04_06_171450) do
     t.string "phonetype3"
     t.string "phonetype4"
     t.string "fullname"
+    t.string "type_property"
   end
 
   create_table "addresslogs", force: :cascade do |t|
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_04_06_171450) do
     t.date "anniversary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "type_property"
     t.index ["address_book_id"], name: "index_addresslogs_on_address_book_id"
   end
 
@@ -72,10 +74,11 @@ ActiveRecord::Schema.define(version: 2019_04_06_171450) do
   create_table "networks", force: :cascade do |t|
     t.string "reference_name"
     t.string "email_phone"
-    t.date "date_reference"
+    t.date "anniversary"
     t.integer "address_book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "kind_relationship"
     t.index ["address_book_id"], name: "index_networks_on_address_book_id"
   end
 

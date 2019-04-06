@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :networks
     resources :apromotions
     resources :addresslogs
+    resources :networks
   end
   
   resources :reminders
