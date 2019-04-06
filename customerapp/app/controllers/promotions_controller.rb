@@ -1,6 +1,8 @@
 class PromotionsController < ApplicationController
     def index
         @promotions = Promotion.all
+        
+
        end
        
        def edit
