@@ -37,6 +37,7 @@ class PromotionsController < ApplicationController
            end
          end
          def destroy
+          
            @promotion = Promotion.find(params[:id])
            @promotion.destroy
           

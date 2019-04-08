@@ -38,8 +38,8 @@ class NetworksController < ApplicationController
       def destroy
         @network = Network.find(params[:id])
            @network.destroy
-          
-           redirect_to {|params| "/address_books/#{params[:address_book_id].pluralize}/networks"}
+           address = @network.address_book_id
+            redirect_to address_book_networks_path(address)
          end
        private
            def network_params

@@ -30,14 +30,14 @@
     
       <%if params[:format] != "0"%>
           <%@valid = Apromotion.where(address_book_id: params[:format], promotion_id: promotion.id).exists? %>
-          
+          <%apromotion = Apromotion.where(address_book_id: params[:format], promotion_id: promotion.id).ids %>
           <td><%if @valid ==  true%>
                 <%=check_box_tag("ok_answer", value = "1", checked = true, options = {})%>
               <%else%>
                 <%=check_box_tag("ok_answer", value = "", checked = false, options = {})%>
             <%end%>
-             <%= link_to "Assign", address_book_apromotions_path(address_book_id: params[:format], promotion_id: promotion.id, type_promotion: promotion.type_promotion), method: :post  %>
-             <%# <%= link_to "Remove", address_book_apromotion_path(address_book_id: params[:format], promotion_id: promotion.id), method: :delete  %></td> %>
+             <%= link_to "Assign", address_book_apromotions_path(address_book_id: params[:format], promotion_id: promotion.id, type_promotion: promotion.type_promotion, apromotion: apromotion), method: :post  %>
+             <%= link_to "Remove", address_book_apromotion_path(id: apromotion, address_book_id: params[:format]), method: :delete %></td> 
         
         <%else%>
         <%# if comming from customer list %>
@@ -52,5 +52,5 @@
       
    
 
-<%= link_to 'Back', :back %>
+<%= link_to 'Back', address_books_path  %>
 
