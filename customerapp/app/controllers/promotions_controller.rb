@@ -18,6 +18,7 @@ class PromotionsController < ApplicationController
            
            
                @promotion = Promotion.new(promotion_params)
+               
                if @promotion.save 
                    redirect_to promotions_path 
                    

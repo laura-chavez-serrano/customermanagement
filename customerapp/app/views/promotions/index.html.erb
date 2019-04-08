@@ -11,7 +11,7 @@
     <th>Delete</th>
     <%# if comming from one customer or index view%> 
     
-      <th>Promotion Assigned to:<br>
+      <th>Assigned to:<br>
       <%= AddressBook.find(params[:format]).fullname %></th>
     <%end%>
   </tr>
@@ -29,14 +29,18 @@
               <%# if comming from one customer %>
     
       <%if params[:format] != "0"%>
-          <%@valid = Apromotion.where(address_book_id: params[:format], type_promotion: promotion.type_promotion).exists? %>
+          <%@valid = Apromotion.where(address_book_id: params[:format], promotion_id: promotion.id).exists? %>
           
           <td><%if @valid ==  true%>
                 <%=check_box_tag("ok_answer", value = "1", checked = true, options = {})%>
               <%else%>
                 <%=check_box_tag("ok_answer", value = "", checked = false, options = {})%>
-            <%end%></td>
+            <%end%>
+             <%= link_to "Assign", address_book_apromotions_path(address_book_id: params[:format], promotion_id: promotion.id, type_promotion: promotion.type_promotion), method: :post  %>
+             <%# <%= link_to "Remove", address_book_apromotion_path(address_book_id: params[:format], promotion_id: promotion.id), method: :delete  %></td> %>
+        
         <%else%>
+        <%# if comming from customer list %>
         <td><%= link_to 'Assignments', promotion_path(promotion) %></td>   
         
       <% end %>
