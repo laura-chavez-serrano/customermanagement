@@ -1,29 +1,60 @@
 <h1>Network of :
- <%= AddressBook.find(params[:address_book_id]).fullname %></h1>
-  
+<%@address_book_id =params[:address_book_id] %>
+ <% @address_book=AddressBook.find(@address_book_id) %>
+  <%=@address_book.fullname%></h1>
 <table>
-  <tr>
-    
+  
+  <%if @networks.present?%>
+    <tr>
     <th> Type</th>
     <th>Name </th>
       <th> anniversary/birthday</th>
       <th>e-mail/phone </th>
       
   </tr>
+  <%end%>
  
   <% @networks.each do |network| %>
     <tr>
-    <td><%= network.kind_relationship%>
+      <td><%= network.kind_relationship%></td>
       <td><%= network.reference_name%></td>
       <td><%= network.anniversary.to_s(:long)%></td>
       <td><%= network.email_phone%></td>
-      
-       
-      
-      
-    </tr>
     
-  <% end %>
+      
+      <td><%= link_to 'Update', edit_address_book_network_path(network,:address_book_id => @address_book_id) %></td>
+     <td><%= link_to 'Destroy', address_book_network_path(network, :address_book_id => @address_book_id),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td> 
+    </tr>
+    <% end %> 
+</table>   
+     
+              <h2>Add a New Network Member:</h2>
+        <%= form_with(model: [ @address_book, @address_book.networks.build ], local: true) do |form| %>
+                  <p>
+                    <%= form.select(:kind_relationship,['Partner','Children','Parents','Sibligs','Friend'], :include_blank => "Network Type") %>
+        
+                  </p>
+                  <p>
+                    <%= form.label "Full name" %><br>
+                    <%= form.text_field :reference_name %>
+                  </p>
+                  <p>
+                    <%= form.label :anniversary %><br>
+                    <%= form.date_field :anniversary %>
+                  </p>
+                  <p>
+                    <%= form.label :email_phone %><br>
+                    <%= form.text_field :email_phone %>
+                  </p>
+                  <%= form.hidden_field :address_book_id, :value => @address_book_id %>
+                  <p>
+                    <%= form.submit %>
+                  </p>
+        <% end %>
+      
+   
   
-</table>
-<%= link_to 'Back', address_books_path %>
+
+<%= link_to 'Back', address_books_path  %>

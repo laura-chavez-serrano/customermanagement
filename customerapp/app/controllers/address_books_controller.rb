@@ -3,10 +3,10 @@ class AddressBooksController < ApplicationController
         @address_books = AddressBook.all
        end
        #details of address 
-     def show
+      def show
         
       @address = AddressBook.find(params[:id])
-   end
+      end
        def edit
            @address_book = AddressBook.find(params[:id])
        end

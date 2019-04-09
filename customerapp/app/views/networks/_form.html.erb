@@ -1,0 +1,47 @@
+
+ 
+<%= form_with model: [@address_book,@network], local: true do |form| %>
+ 
+ <% if @network.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@network.errors.count, "error") %> prohibited
+        this record from being saved:
+      </h2>
+      <ul>
+        <% @network.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% if notice %>
+  <p><%= notice %></p>
+<% end %>
+  <p>
+    <%= form.label :kind_relationship %><br>
+    <%= form.select(:kind_relationship,['Partner','Children','Parents','Sibligs','Friend'], :include_blank => "Network Type" ) %>
+  </p>
+ 
+  <p>
+    <%= form.label :reference_name %><br>
+    <%= form.text_field :reference_name %>
+  </p>
+ <p>
+    <%= form.label :anniversary %><br>
+    <%= form.date_field :anniversary %>
+    
+    
+  </p>
+  <p>
+    <%= form.label :email_phone %><br>
+    <%= form.text_field :email_phone %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', address_book_networks_path %>
+

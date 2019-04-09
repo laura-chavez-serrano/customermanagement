@@ -1,1 +1,92 @@
 <%# <%address information %> 
+<h1>Detail information:
+<%= @address.fullname%></h1>
+<div>
+
+<p>Aniversary in this property:
+<%= @address.date_anniversary%></p>
+<p>Address Information:
+<%=@address.type_property%>
+<%=@address.address%>
+<%=@address.city%>
+<%= @address.zip%></p>
+</div>
+<div>
+<p>Contact information:
+<%=@address.email%>
+<%=@address.phonetype%> 
+<%=@address.phone%>
+<%=@address.phonetype2%> 
+<%=@address.phone2%>
+<%=@address.phonetype3%> 
+<%=@address.phone3%>
+<%=@address.phonetype4%> 
+<%=@address.phone4%></p>
+</div>
+<div>
+<p>Status:
+<%=@address.status%></p>
+<p>Category:
+<%=@address.category%></p>
+<p>Comments:
+<%=@address.comments%></p>
+    
+    <h3>Network</h3>
+        <table>
+        <tr>
+            <th> Type</th>
+            <th>Name </th>
+            <th> anniversary/birthday</th>
+            <th>e-mail/phone </th>
+        
+        </tr>
+            <% @address.networks.each do |network| %>
+            <tr>
+                <td><%= network.kind_relationship%></td>
+                <td><%= network.reference_name%></td>
+                <td><%= network.anniversary.to_s(:long)%></td>
+                <td><%= network.email_phone%></td>
+            </tr>
+            <% end %>
+        </table> 
+      <h3>Transaction History</h3>
+      <table>
+  <tr>
+    
+    <th> Address</th>
+    <th>City </th>
+      <th> Anniversary</th>
+      
+  </tr>
+ 
+  <% @address.addresslogs.each do |address| %>
+    <tr>
+      <td><%= address.type_property%></td>
+      <td><%= address.address%></td>
+      <td><%= address.city%></td>
+      <td><%= address.anniversary.to_s(:long)%>
+       
+    </tr>
+  <% end %>
+</table>
+ <h3>Promotions Assigned</h3>
+      <table>
+  <tr>
+    
+    <th> Type</th>
+    
+      
+  </tr>
+ 
+  <% @address.apromotions.each do |promotion| %>
+    <tr>
+      <td><%= promotion.type_promotion%></td>
+    
+       
+    </tr>
+  <% end %>
+</table>
+<%= link_to 'Back', address_books_path  %>
+   
+  
+    
