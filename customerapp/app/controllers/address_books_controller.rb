@@ -1,7 +1,11 @@
 class AddressBooksController < ApplicationController
     def index
-        @address_books = AddressBook.all
-       end
+      if search_params[:search_term].present?
+        @address_books = AddressBook.search_by_fullname_address_city(search_params[:search_term]).page(params[:page])
+    else
+        @address_books = AddressBook.all.page(params[:page]).order(:id)
+    end 
+      end
        #details of address 
       def show
         
@@ -53,7 +57,11 @@ class AddressBooksController < ApplicationController
           
            redirect_to address_books_path
          end
-       private
+    private
+          def search_params
+            params.permit(:search_term)
+            end
+
            def address_book_params
                params.require(:address_book).permit(:customer_type, 
                :first_name,
