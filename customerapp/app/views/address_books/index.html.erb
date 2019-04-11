@@ -2,18 +2,23 @@
  <%= link_to 'New Customer', new_address_book_path %>
 <%# <%= link_to 'All Promotions', promotions_path(format: "0") %></td> 
 <%= link_to 'Set up' %>
+<%= form_tag address_books_path, method: :get do %>
+    <%= text_field_tag :search_term, params[:search_term], :placeholder => 'Type a search here' %>
+    <%= submit_tag "Search", name: nil %>
+  <% end %></h4>
+  <%= paginate @address_books %> 
+<%= page_entries_info @address_books %> 
 <table>
   <tr>
     
-    <th>Name</th>
-    <th> Address</th>
-    
-      <th> email</th>
-      <th>Type </th>
+    <th><%= sort_link "fullname"%></th>
+    <th><%= sort_link "address"%></th>
+    <th><%= sort_link "city" %></th>
+      <th> Type </th>
       <th> Phone</th>
-      <th> Anniversary</th>
-      <th> Status</th>
-      <th> Category</th>
+      <th><%= sort_link "anniversary"%></th>
+      <th><%= sort_link "status"%> </th>
+      <th><%= sort_link "category"%></th>
   </tr>
  
   <% @address_books.each do |address| %>
@@ -21,7 +26,7 @@
       
       <td><%= link_to address.fullname,  address_book_networks_path(address)%></td>
       <td><%= link_to address.address, address_book_addresslogs_path(address)%></td>
-      
+      <td><%= address.city%></td>
       <td><%= address.phonetype%></td>
       <td><%= number_to_phone(address.phone, area_code: true) %></td>
       
