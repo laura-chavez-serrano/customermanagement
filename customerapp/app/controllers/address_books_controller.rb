@@ -1,9 +1,12 @@
 class AddressBooksController < ApplicationController
+
+  helper_method :sort_column, :sort_direction
+
     def index
       if search_params[:search_term].present?
-        @address_books = AddressBook.search_by_fullname_address_city(search_params[:search_term]).page(params[:page])
+        @address_books = AddressBook.search_by_fullname_address_city(search_params[:search_term]).page(params[:page]).order("#{sort_column} #{sort_direction}")
     else
-        @address_books = AddressBook.all.page(params[:page]).order(:id)
+        @address_books = AddressBook.all.page(params[:page]).order("#{sort_column} #{sort_direction}")
     end 
       end
        #details of address 
@@ -62,6 +65,17 @@ class AddressBooksController < ApplicationController
             params.permit(:search_term)
             end
 
+            def sort_column
+              sortable_columns.include?(params[:column]) ? params[:column] : "id"
+          end
+            
+          def sortable_columns
+              ["fullname", "address", "city", "date_anniversary", "status", "category"]
+            end
+      
+          def sort_direction
+              %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+          end
            def address_book_params
                params.require(:address_book).permit(:customer_type, 
                :first_name,

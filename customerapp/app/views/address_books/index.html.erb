@@ -11,14 +11,14 @@
 <table>
   <tr>
     
-    <th>Name</th>
-    <th> Address</th>
-    <th> City</th>
-      <th>Type </th>
+    <th><%= sort_link "fullname"%></th>
+    <th><%= sort_link "address"%></th>
+    <th><%= sort_link "city" %></th>
+      <th> Type </th>
       <th> Phone</th>
-      <th> Anniversary</th>
-      <th> Status</th>
-      <th> Category</th>
+      <th><%= sort_link "anniversary"%></th>
+      <th><%= sort_link "status"%> </th>
+      <th><%= sort_link "category"%></th>
   </tr>
  
   <% @address_books.each do |address| %>
