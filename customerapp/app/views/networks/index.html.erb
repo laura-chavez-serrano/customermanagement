@@ -1,8 +1,8 @@
-<h1>Network of :
+<h4>
 <%@address_book_id =params[:address_book_id] %>
  <% @address_book=AddressBook.find(@address_book_id) %>
-  <%=@address_book.fullname%></h1>
-<table>
+  <%=@address_book.fullname%></h4>
+<table class="table">
   
   <%if @networks.present?%>
     <tr>
@@ -30,29 +30,39 @@
     <% end %> 
 </table>   
      
-              <h2>Add a New Network Member:</h2>
+              <h1 class='h3 mb-3 font-weight-normal text-center mt-5'>New Network:</h1>
         <%= form_with(model: [ @address_book, @address_book.networks.build ], local: true) do |form| %>
-                  <p>
+                  
+                  <div class="form-group">
+                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <%= form.select(:kind_relationship,['Partner','Children','Parents','Sibligs','Friend'], :include_blank => "Network Type") %>
-        
-                  </p>
-                  <p>
-                    <%= form.label "Full name" %><br>
-                    <%= form.text_field :reference_name %>
-                  </p>
-                  <p>
+                  </a>
+                  </div>
+                  
+                      
+                  
+                  <div class="form-group">
+                  <%= form.label "Full name" %>
+                  <%= form.text_field :reference_name, class:"form-control"%>
+                    
+                  
+                  </div>
+                  
+                  
+                  <div class="form-group">
                     <%= form.label :anniversary %><br>
-                    <%= form.date_field :anniversary %>
-                  </p>
-                  <p>
+                    <%= form.date_field :anniversary, class:"form-control" %>
+                  </div>
+                  <div class="form-group">
                     <%= form.label :email_phone %><br>
-                    <%= form.text_field :email_phone %>
-                  </p>
+                    <%= form.text_field :email_phone, class:"form-control" %>
+                  </div>
                   <%= form.hidden_field :address_book_id, :value => @address_book_id %>
-                  <p>
-                    <%= form.submit %>
-                  </p>
+                  <div class="form-group">
+                    <%= form.submit  :class => "btn btn-lg btn-info btn-block"%>
+                  </div>
         <% end %>
+      
       
    
   
