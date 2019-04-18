@@ -71,3 +71,6 @@ gem 'pg_search'
 gem 'bootstrap-sass'
 # Use JQuery
 gem 'jquery-rails'
+# Use authentication for outlook
+gem 'oauth2'
+gem 'activerecord-session_store'

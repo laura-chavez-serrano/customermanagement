@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get 'address_books/index'
+  # get 'address_books/index'
+  get 'authorize' => 'auth#gettoken'
  
   
   
@@ -15,5 +16,6 @@ Rails.application.routes.draw do
   resources :statuses
   resources :promotions
 
-  root 'address_books#index'
+  # root 'address_books#index'
+  root 'home#index'
 end
