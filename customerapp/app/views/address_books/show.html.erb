@@ -1,7 +1,7 @@
 <%# <%address information %> 
-<h1>Detail information:
-<%= @address.fullname%></h1>
-<div>
+<h4 class='h3 mb-3 font-weight-normal text-center mt-5'>Detail information:
+<%= @address.fullname%></h4>
+<div class="form-group mx-3 mb-2">
 
 <p>Aniversary in this property:
 <%= @address.date_anniversary%></p>
@@ -11,7 +11,7 @@
 <%=@address.city%>
 <%= @address.zip%></p>
 </div>
-<div>
+<div class="form-group mx-3 mb-2">
 <p>Contact information:
 <%=@address.email%>
 <%=@address.phonetype%> 
@@ -23,7 +23,7 @@
 <%=@address.phonetype4%> 
 <%=@address.phone4%></p>
 </div>
-<div>
+<div class="form-group mx-3 mb-2">
 <p>Status:
 <%=@address.status%></p>
 <p>Category:
@@ -31,7 +31,7 @@
 <p>Comments:
 <%=@address.comments%></p>
     
-    <h3>Network</h3>
+    <h3 class='h3 mb-3 font-weight-normal text-center mt-5'>Network</h3>
         <table>
         <tr>
             <th> Type</th>
@@ -49,7 +49,7 @@
             </tr>
             <% end %>
         </table> 
-      <h3>Transaction History</h3>
+      <h3 class='h3 mb-3 font-weight-normal text-center mt-5'>Transaction History</h3>
       <table>
   <tr>
     
@@ -69,7 +69,7 @@
     </tr>
   <% end %>
 </table>
- <h3>Promotions Assigned</h3>
+ <h3 class='h3 mb-3 font-weight-normal text-center mt-5'>Promotions Assigned</h3>
       <table>
   <tr>
     
