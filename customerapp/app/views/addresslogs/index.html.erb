@@ -1,7 +1,7 @@
-<h1>History of Address for:
- <%= AddressBook.find(params[:address_book_id]).fullname %></h1>
+<h4 class='h3 mb-3 font-weight-normal text-center mt-5'>History of Address for:
+ <%= AddressBook.find(params[:address_book_id]).fullname %></h4>
   
-<table>
+<table class="table">
   <tr>
     
     <th> Address</th>
@@ -24,4 +24,4 @@
   <% end %>
   
 </table>
-<%= link_to 'Back', address_books_path %>
+<%= link_to 'Home', address_books_path %>
