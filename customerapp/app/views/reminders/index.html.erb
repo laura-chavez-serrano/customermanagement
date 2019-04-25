@@ -1,7 +1,7 @@
-<h1>Listing Reminders</h1>
+<h4 class='h3 mb-3 font-weight-normal text-center mt-5'>Listing Reminders</h4>
  <%= link_to 'New Reminder', new_reminder_path %>
   
-<table>
+<table class="table">
   <tr>
     <th>Close Type</th>
     <th>Periods for reminder</th>
@@ -19,3 +19,4 @@
     </tr>
   <% end %>
 </table>
+<%= link_to 'Home', address_books_path  %>
