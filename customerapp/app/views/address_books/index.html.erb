@@ -1,3 +1,4 @@
+
 <div id="main-container" class="container">
     <div class="row">
         <div class="col-md-9">
@@ -9,7 +10,18 @@
           <%= link_to 'New Customer', new_address_book_path %>
         </div>
         <div class="col-xs-3" >
-          <%= link_to 'Set up' %>
+          <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Setup
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      
+                      <%= link_to 'Promotions', promotions_path%><br>
+                      <%= link_to 'Remainders', reminders_path%><br>
+                      <%= link_to 'Status', statuses_path%> 
+                      
+                    </div>
+            </div>
         </div>
         <div class="col-xs-6">
                 <%=  form_tag address_books_path, method: :get do %>
@@ -18,7 +30,7 @@
           
                   <% end %>
         </div>
-    </div>
+</div>
     <div class="row">
         <div class="col-md-12">
           <%= '.' %>
