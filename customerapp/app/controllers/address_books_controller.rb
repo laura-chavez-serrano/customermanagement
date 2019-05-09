@@ -1,5 +1,6 @@
 class AddressBooksController < ApplicationController
   before_action :calcula
+  require reminder
   helper_method :sort_column, :sort_direction
 
     def index
@@ -63,9 +64,11 @@ class AddressBooksController < ApplicationController
     private
           def calcula
             @alladdress = AddressBook.where(mailed: false)
-            @alladdress.each do 
-              @address_book = AddressBook.find(id: @alladdress.id)
-              @address_book.update(mailed: true)
+            @alladdress.each do |a|
+              @address_book = AddressBook.find(a.id)
+              # reach for reminder periods using category field
+              
+              @address_book.update(mailed: true, comments: "test")
             end
           end
           def search_params
