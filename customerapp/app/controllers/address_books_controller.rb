@@ -3,6 +3,8 @@ class AddressBooksController < ApplicationController
   # require reminder
   helper_method :sort_column, :sort_direction
 
+
+  
     def index
       if search_params[:search_term].present?
         @address_books = AddressBook.search_by_fullname_address_city(search_params[:search_term]).page(params[:page]).order("#{sort_column} #{sort_direction}")
