@@ -8,5 +8,6 @@ class Addphonetoaddressbook < ActiveRecord::Migration[5.2]
     add_column :address_books, :phonetype2, :string
     add_column :address_books, :phonetype3, :string
     add_column :address_books, :phonetype4, :string
+    
   end
 end
