@@ -1,0 +1,41 @@
+"id","customer_type","first_name","last_name","address","city","zip","email","status","category","date_anniversary","comments","created_at","updated_at","phone","phone2","phone3","phone4","phonetype","phonetype2","phonetype3","phonetype4","fullname","type_property","mailed"
+271,"Buyer","Melissa","Raybuck","1217 Edmond St","Durham",27712,"buddhaslight8@gmail.com","Close","Close A","2016-03-23","test","2019-04-04 02:27:55.108816","2019-07-16 11:36:32.167848","","","","","","","","","Melissa Raybuck","own",TRUE
+272,"Buyer","Kate","Bruce","1013 Red Hat Lane","Durham",27713,,"Close","Close B","2016-06-29","test","2019-04-04 02:27:55.110963","2019-05-09 02:02:21.040518",,,,,,,,,"Kate Bruce",,TRUE
+273,"Buyer","Christopher","McCallin","7746 Weathered Oak Way","Raleigh",27616,"cmccallin13@gmail.com","Close","Close A","2015-09-29","test","2019-04-04 02:27:55.11307","2019-05-09 02:02:21.044235",,,,,,,,,"Christopher McCallin",,TRUE
+274,"Buyer","Blake","Anderson","377 Booth RD","Chapel Hill",27516,,"Close","Close C","2016-05-31","test","2019-04-04 02:27:55.115101","2019-05-09 02:02:21.047464",,,,,,,,,"Blake Anderson",,TRUE
+275,"Buyer","Amos Jr","Cooper","122 E Seeman Street","Durham",27701,,"Close","Close A","2016-06-22","test","2019-04-04 02:27:55.117006","2019-05-09 02:02:21.050628",,,,,,,,,"Amos Jr Cooper",,TRUE
+276,"Buyer","Antonio","Baltazar Zurita","1905 House Avenue","Durham",27707,"ncdurham1@gmail.com","Close","Close A","2016-06-30","test","2019-04-04 02:27:55.118935","2019-05-09 02:02:21.053564",,,,,,,,,"Antonio Baltazar Zurita",,TRUE
+277,"Buyer","Cesar Damian","Gonzalez Arenas","2311 Cynthia Drive","Durham",27704,,"Close","Close A","2016-07-12","test","2019-04-04 02:27:55.120964","2019-05-09 02:02:21.056681",,,,,,,,,"Cesar Damian Gonzalez Arenas",,TRUE
+278,"Buyer","Andrew","Fairbanks","3628 Shrewsbury Streer","Durham",27707,,"Close","Close B","2016-08-18","test","2019-04-04 02:27:55.122966","2019-05-09 02:02:21.059725",,,,,,,,,"Andrew Fairbanks",,TRUE
+279,"Buyer","Bradley","Bolton","3 Crestbury Court","Durham",27713,,"Close","Close B","2016-11-04","test","2019-04-04 02:27:55.124862","2019-05-09 02:02:21.06241",,,,,,,,,"Bradley Bolton",,TRUE
+280,"Buyer","Jordan","Davis","25 Sandtone Ridge Drive","Durham",27713,,"Close","Close B","2016-11-08","test","2019-04-04 02:27:55.126894","2019-05-09 02:02:21.065156",,,,,,,,,"Jordan Davis",,TRUE
+281,"Buyer","Olivia","Bowers","8 Big Bluff Place","Durham",27712,,"Close","Close C","2017-01-12","test","2019-04-04 02:27:55.129133","2019-05-09 02:02:21.067791",,,,,,,,,"Olivia Bowers",,TRUE
+282,"Buyer","Katherine","McDaniel","505 Hugo St","Durham",27713,,"Close","Close B","2015-09-28","test","2019-04-04 02:27:55.131509","2019-05-09 02:02:21.07054",,,,,,,,,"Katherine McDaniel",,TRUE
+283,"Buyer","Jesse","Bikman","3 Medearis Court","Durham",27707,,"Close","Close B","2017-04-25","test","2019-04-04 02:27:55.133914","2019-05-09 02:02:21.074358",,,,,,,,,"Jesse Bikman",,TRUE
+284,"Buyer","Kelly","McCarren","197 Quarter Gate Trace","Chapel Hill",27516,,"Close","Close B","2017-05-15","test","2019-04-04 02:27:55.136297","2019-05-09 02:02:21.077401",,,,,,,,,"Kelly McCarren",,TRUE
+285,"Buyer","Justin","Cuevas","108 Shady Point Court","Durham",27703,,"Close","Close C","2017-07-12","test","2019-04-04 02:27:55.138676","2019-05-09 02:02:21.080158",,,,,,,,,"Justin Cuevas",,TRUE
+286,"Buyer","Darrell","Jefferies","707 Clearwater Drive","Sanford",27330,,"Close","Close F","2016-05-06","test","2019-04-04 02:27:55.140605","2019-05-09 02:02:21.082878",,,,,,,,,"Darrell Jefferies",,TRUE
+287,"Buyer","Kristyn","Walker",,,,"Kristynwalker@gmail.com","In Progress","In Progress B",,"test","2019-04-04 02:27:55.142811","2019-05-09 02:02:21.086204",,,,,,,,,"Kristyn Walker",,TRUE
+288,"Buyer","Ben","Schlax",,,,"Benschalax@gmail.com","In Progress","In Progress B",,"test","2019-04-04 02:27:55.145211","2019-05-09 02:02:21.089512",,,,,,,,,"Ben Schlax",,TRUE
+289,"Buyer","Brittany","Burton",,,,"Brittanyburton1107;@gmail.com","In Progress","In Progress A",,"test","2019-04-04 02:27:55.147259","2019-05-09 02:02:21.092871",,,,,,,,,"Brittany Burton",,TRUE
+290,"Buyer","Alejandra","Dorantes","5006 Greenview Drive","Durham",27713,,"Close","Close F","2015-07-20","test","2019-04-04 02:27:55.149129","2019-05-09 02:02:21.096842",,,,,,,,,"Alejandra Dorantes",,TRUE
+291,"Buyer","Pavle","Matak","1804 N Alston Av","Durham",27701,,"Close","Close B","2015-08-25","test","2019-04-04 02:27:55.151083","2019-05-09 02:02:21.100322",,,,,,,,,"Pavle Matak",,TRUE
+292,"Buyer","Hector","Sauceda-Padilla","4623 Bragg Road","Durham",27704,,"Close","Close F","2015-08-28","test","2019-04-04 02:27:55.153009","2019-05-09 02:02:21.104838",,,,,,,,,"Hector Sauceda-Padilla",,TRUE
+293,"Buyer","Lauro","Martinez-Perez","2115 Faucette street","Durham",27704,,"Close","Close F","2015-10-05","test","2019-04-04 02:27:55.154855","2019-05-09 02:02:21.109283",,,,,,,,,"Lauro Martinez-Perez",,TRUE
+294,"Buyer","Megan","Sayre","6024 Newhall RD","Durham",27713,,"Close","Close F","2016-03-30","test","2019-04-04 02:27:55.157039","2019-05-09 02:02:21.112361",,,,,,,,,"Megan Sayre",,TRUE
+295,"Buyer","Chongming","Yang","1902 Patterson Mill RD","Durham",27703,,"Close","Close C","2016-07-14","test","2019-04-04 02:27:55.159198","2019-05-09 02:02:21.11539",,,,,,,,,"Chongming Yang",,TRUE
+296,"Buyer","Roberto","Maya-Sanchez","4621 Redwood Road","Durham",27704,,"Close","Close C","2016-09-15","test","2019-04-04 02:27:55.161563","2019-05-09 02:02:21.118238",,,,,,,,,"Roberto Maya-Sanchez",,TRUE
+297,"Buyer","Denis","Mackey","425 S Morgan ST","Roxboro",27573,,"Close","Close F","2016-12-22","test","2019-04-04 02:27:55.163646","2019-05-09 02:02:21.121376",,,,,,,,,"Denis Mackey",,TRUE
+298,"Buyer","Patrick","Foster","7250 NC 751 #1307","Durham",27707,,"Close","Close F","2017-01-19","test","2019-04-04 02:27:55.165819","2019-05-09 02:02:21.12498",,,,,,,,,"Patrick Foster",,TRUE
+299,"Buyer","Anna Lina","Karin Rosengren","1200 Hanover Street","Durham",27701,,"Close","Close C","2016-06-29","test","2019-04-04 02:27:55.168044","2019-05-09 02:02:21.127748",,,,,,,,,"Anna Lina Karin Rosengren",,TRUE
+300,"Buyer","Katherine","McDaniel","505 Hugo ST","Durham",27704,,"Close","Close B","2017-03-06","test","2019-04-04 02:27:55.17006","2019-05-09 02:02:21.130573",,,,,,,,,"Katherine McDaniel",,TRUE
+301,"Buyer","Sabu","Devasia","4009 Lady Slipper Lane","Durham",27704,,"Close","Close A","2017-06-29","test","2019-04-04 02:27:55.172102","2019-05-09 02:02:21.133467",,,,,,,,,"Sabu Devasia",,TRUE
+302,"Buyer","Lindsay","Franklin","3241 Banks Road","Raleigh",27603,,"Close","Close C","2017-07-31","test","2019-04-04 02:27:55.174243","2019-05-09 02:02:21.136029",,,,,,,,,"Lindsay Franklin",,TRUE
+303,"Buyer","Stephanie","Suber","10 Stillwater Park","Durham",27707,"snssuber@gmail.com","In Progress",,,"test","2019-04-04 02:27:55.176183","2019-05-09 02:02:21.139268",,,,,,,,,"Stephanie Suber",,TRUE
+304,"Buyer","Edgardo","Lauriano","9171 Durham Road","Durham",27583,"Edgardo.lauriano@gmail.com","In Progress",,,"test","2019-04-04 02:27:55.17825","2019-05-09 02:02:21.143177",,,,,,,,,"Edgardo Lauriano",,TRUE
+305,"Buyer","Robert","Weeks",,,,"Robertweeksrj@yahoo.com;Nick112580@aol.com","In Progress","In Progress A",,"test","2019-04-04 02:27:55.180312","2019-05-09 02:02:21.146005",,,,,,,,,"Robert Weeks",,TRUE
+306,"Buyer","Carl","Piraneo",,,,"carl.piraneo@gmail.com","In Progress",,,"test","2019-04-04 02:27:55.182611","2019-05-09 02:02:21.148645",,,,,,,,,"Carl Piraneo",,TRUE
+307,"Buyer","Theresa","McGinley",,,,"mcgingleyrt@aol.com","In Progress","In Progress B",,"test","2019-04-04 02:27:55.184788","2019-05-09 02:02:21.151869",,,,,,,,,"Theresa McGinley",,TRUE
+308,"Buyer","Darren","Smith","2809 Randleaf Ct","Raleigh",27604,"Darren.richard.smith@gmail.com","In Progress","OH/Maybe",,"test","2019-04-04 02:27:55.187085","2019-05-09 02:02:21.154816",,,,,,,,,"Darren Smith",,TRUE
+309,"Buyer","Stephen","carraway","2809 Randleaf Ct","Raleigh",27604,"Stephen.carraway.2@gmail.com","In Progress","OH/Maybe",,"test","2019-04-04 02:27:55.189344","2019-05-09 02:02:21.159008",,,,,,,,,"Stephen carraway",,TRUE
+310,"Buyer","Kyle","Nunn","2809 Randleaf Ct","Raleigh",27604,"Klyenunn@gmail.com","In Progress","OH/Maybe",,"test","2019-04-04 02:27:55.191503","2019-05-09 02:02:21.162259",,,,,,,,,"Kyle Nunn",,TRUE
